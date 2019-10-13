@@ -1,0 +1,14 @@
+package com.chateaugiron.basket
+
+import com.chateaugiron.basket.Match;
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
+
+global HardSoftScoreHolder scoreHolder;
+
+rule "noNullRoomPeriod"
+    when
+        Match( roomNumber == null );
+        Match( period == null );
+    then
+        scoreHolder.addHardConstraintMatch(kcontext, -1);
+end
