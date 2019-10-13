@@ -20,7 +20,7 @@ public class AppTest {
         unsolvedCourseSchedule = new MatchSchedule();
 
         for(int i = 0; i < 10; i++){
-            unsolvedCourseSchedule.getLectureList().add(new Match());
+            unsolvedCourseSchedule.getMatchList().add(new Match());
         }
 
         unsolvedCourseSchedule.getPeriodList().addAll(Arrays.asList(new Integer[] { 1, 2, 3 }));
@@ -32,8 +32,7 @@ public class AppTest {
 
         SolverFactory<MatchSchedule> solverFactory = SolverFactory.createFromXmlResource("courseScheduleSolverConfiguration.xml");
         Solver<MatchSchedule> solver = solverFactory.buildSolver();
-        MatchSchedule solvedCourseSchedule = solver.solve(unsolvedCourseSchedule);
-        System.out.println("OK");
+        MatchSchedule solvedCourseSchedule = solver.solve(unsolvedCourseSchedule);        
         assertNotNull(solvedCourseSchedule.getScore());
         assertEquals(-4, solvedCourseSchedule.getScore().getHardScore());        
     }
@@ -43,8 +42,7 @@ public class AppTest {
 
         SolverFactory<MatchSchedule> solverFactory = SolverFactory.createFromXmlResource("courseScheduleSolverConfigDrools.xml");
         Solver<MatchSchedule> solver = solverFactory.buildSolver();
-        MatchSchedule solvedCourseSchedule = solver.solve(unsolvedCourseSchedule);
-        System.out.println("OK2");
+        MatchSchedule solvedCourseSchedule = solver.solve(unsolvedCourseSchedule);        
         assertNotNull(solvedCourseSchedule.getScore());
         assertEquals(0, solvedCourseSchedule.getScore().getHardScore());
     }

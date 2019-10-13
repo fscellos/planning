@@ -13,7 +13,7 @@ public class ScoreCalculator  implements EasyScoreCalculator<MatchSchedule> {
 	        int softScore = 0;
 
 	        HashSet<String> occupiedRooms = new HashSet<>();
-	        for (Match lecture : courseSchedule.getLectureList()) {
+	        for (Match lecture : courseSchedule.getMatchList()) {
 	            if(lecture.getPeriod() != null && lecture.getRoomNumber() != null) {
 	                String roomInUse = lecture.getPeriod().toString() + ":" + lecture.getRoomNumber().toString();
 	                if (occupiedRooms.contains(roomInUse)) {

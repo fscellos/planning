@@ -41,7 +41,7 @@ public class MatchSchedule {
     }
 
     @PlanningEntityCollectionProperty
-    public List<Match> getLectureList() {
+    public List<Match> getMatchList() {
         return matchList;
     }
 
@@ -57,6 +57,6 @@ public class MatchSchedule {
     public void printCourseSchedule() {
         matchList.stream()
                 .map(c -> "Lecture in Room " + c.getRoomNumber().toString() + " during Period " + c.getPeriod().toString())
-                .forEach(k -> logger.info(k));
+                .forEach(k -> System.out.println(k));
     }
 }
