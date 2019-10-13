@@ -8,16 +8,25 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>planning</name>
 	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.3.RELEASE</version>
+	</parent>
+
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<java.version>1.8</java.version>
+		<org.springframework.version>5.2.0.RELEASE</org.springframework.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit5.version>5.1.1</junit5.version>
 		<junit-jupiter.version>5.2.0</junit-jupiter.version>
 		<junit-platform.version>1.2.0</junit-platform.version>
 	</properties>
 	<dependencies>
+		<!-- Test -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
@@ -34,6 +43,11 @@
 			<groupId>org.optaplanner</groupId>
 			<artifactId>optaplanner-core</artifactId>
 			<version>7.27.0.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 	</dependencies>
 </project>
