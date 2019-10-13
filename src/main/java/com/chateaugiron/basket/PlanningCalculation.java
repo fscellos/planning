@@ -36,7 +36,7 @@ public class PlanningCalculation implements CommandLineRunner {
 		unsolvedCourseSchedule.getRoomList().addAll(Arrays.asList(new Integer[] { 1, 2 }));
 
 		SolverFactory<MatchSchedule> solverFactory = SolverFactory
-				.createFromXmlResource("courseScheduleSolverConfiguration.xml");
+				.createFromXmlResource("basketMatchScheduleSolverConfiguration.xml");
 		Solver<MatchSchedule> solver = solverFactory.buildSolver();
 		MatchSchedule solvedCourseSchedule = solver.solve(unsolvedCourseSchedule);
 
