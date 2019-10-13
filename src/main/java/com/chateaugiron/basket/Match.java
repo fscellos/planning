@@ -25,6 +25,5 @@ public class Match {
 
 	public void setRoomNumber(Integer roomNumber) {
 		this.roomNumber = roomNumber;
-	}
-
+	}		
 }

@@ -25,7 +25,7 @@ public class ScoreCalculator  implements EasyScoreCalculator<MatchSchedule> {
 	                hardScore += -1;
 	            }
 	        }
-
-	        return HardSoftScore.valueOf(hardScore, softScore);
+	        
+	        return HardSoftScore.of(hardScore, softScore);
 	    }
 }
